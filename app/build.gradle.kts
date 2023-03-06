@@ -3,12 +3,15 @@
  */
 
 plugins {
-    id("poc.kotlin.kotlin-application-conventions")
+    //id("poc.kotlin.kotlin-application-conventions")
+    id("application")
+    //id("myproject.java-conventions")
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
-    implementation(project(":service"))
+    //implementation("org.apache.commons:commons-text")
+    //implementation(project(":service"))
+    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 }
 
 application {

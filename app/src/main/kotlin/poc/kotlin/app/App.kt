@@ -7,8 +7,29 @@ import poc.kotlin.utilities.StringUtils
 
 import org.apache.commons.text.WordUtils
 
-fun main() {
+fun main() = runBlocking {
     val tokens = StringUtils.split(MessageUtils.getMessage())
     val result = StringUtils.join(tokens)
     println(WordUtils.capitalize(result))
+
+    processAsync()
+    println("Main finished")
 }
+
+
+fun processAsync(){
+    lanuch{
+        delay(1000L)
+        println("Delay finieshed")
+    }
+
+}
+
+
+
+
+
+
+
+
+

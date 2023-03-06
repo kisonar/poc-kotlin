@@ -8,4 +8,6 @@
  */
 
 rootProject.name = "poc-kotlin"
-include( "library", "service", "app",)
+include ("library")
+include ("service")
+include ("app")
