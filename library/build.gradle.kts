@@ -3,5 +3,5 @@
  */
 
 plugins {
-    //id("poc.kotlin.kotlin-library-conventions")
+    id("org.jetbrains.kotlin.jvm")
 }
