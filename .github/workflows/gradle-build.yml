@@ -1,0 +1,23 @@
+name: 'Kisonar POC CI'
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: GitHub checkout action
+        uses: actions/checkout@v3
+      - name: Setup Kotlin
+        uses: fwilhe2/setup-kotlin@main
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.0.2
+      - name: Print Gradle version
+        run: gradle --version
+      - name: Execute Gradle build
+        run: gradle clean build
