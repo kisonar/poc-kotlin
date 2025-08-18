@@ -5,11 +5,17 @@ import org.junit.jupiter.api.Test
 
 class MyDataClassTest {
 
-
     @Test
     fun `should create instance` () {
         val cut = MyDataClass("name")
-        cut.name shouldBe "name"
+        cut.name.shouldBe("name")
+        println("should create instance")
     }
+
+    @Test
+    fun `bbb fsdfsdfsdf`() {
+
+    }
+
 
 }
