@@ -17,7 +17,7 @@ dependencies {
         exclude("org.mockito")
     }
     testImplementation("org.springframework.security:spring-security-test")
-    testImplementation("io.mockk:mockk:1.13.2")
+    testImplementation("io.mockk:mockk:1.14.5")
     testImplementation("com.ninja-squad:springmockk:3.1.1")
 }
 

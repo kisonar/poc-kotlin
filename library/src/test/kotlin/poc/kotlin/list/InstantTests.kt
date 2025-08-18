@@ -10,9 +10,9 @@ class InstantTests {
     @Test
     fun `instant tests`() {
         val now = Instant.now()
-        println(now)
+        //println(now)
 
         val nowUtc =  now.atOffset(ZoneOffset.UTC).toInstant()
-        println(nowUtc)
+       // println(nowUtc)
     }
 }
