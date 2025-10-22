@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":library"))
+    //implementation(project(":library"))
+
 }
