@@ -9,6 +9,6 @@ dependencies{
 
     testImplementation ("io.mockk:mockk:1.14.6")
     testImplementation ("io.kotest:kotest-assertions-core-jvm:6.0.7")
-    testImplementation ("org.junit.jupiter:junit-jupiter:6.0.1")
+    testImplementation ("org.junit.jupiter:junit-jupiter:6.0.2")
     testRuntimeOnly ("org.junit.platform:junit-platform-launcher")
 }
