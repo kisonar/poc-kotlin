@@ -11,7 +11,7 @@ allprojects {
     //}
     dependencies {
         /* all projects have JUnit + Mockito activated in compilation & execution*/
-        testImplementation "org.junit.jupiter:junit-jupiter-engine:6.0.2",
+        testImplementation "org.junit.jupiter:junit-jupiter-engine:6.0.2"
         testRuntimeOnly "org.junit.platform:junit-platform-launcher:6.0.2"
     }
 }
