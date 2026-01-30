@@ -13,10 +13,12 @@ jobs:
         uses: actions/checkout@v6
       - name: Setup Kotlin
         uses: fwilhe2/setup-kotlin@main
+      - name: Print Kotlin version
+        run: kotlin --version	
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3
         with:
-          gradle-version: 8.0.2
+          gradle-version: 9.3.1
       - name: Print Gradle version
         run: gradle --version
       - name: Execute Gradle build
