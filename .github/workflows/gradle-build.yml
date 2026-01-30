@@ -14,7 +14,7 @@ jobs:
       - name: Setup Kotlin
         uses: fwilhe2/setup-kotlin@main
       - name: Print Kotlin version
-        run: kotlin --version	
+        run: kotlin -version	
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3
         with:
