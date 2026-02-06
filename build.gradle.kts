@@ -1,3 +1,7 @@
+plugins {
+    `java-library`
+}
+
 allprojects {
 
     group = "poc.kotlin"
@@ -6,11 +10,14 @@ allprojects {
     repositories {
         mavenCentral()
     }
-    // kotlin {
-    //    jvmToolchain(17)
-    //}
-    dependencies {
+
+    tasks.withType<Test> {
+        useJUnitPlatform {
+        }
     }
+
 }
+
+
 
 
