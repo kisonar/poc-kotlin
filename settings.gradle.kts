@@ -1,6 +1,6 @@
 rootProject.name = "poc-kotlin"
 include("library")
-//include("service")
+include("service")
 //include("app-spring-boot")
 
 pluginManagement {
