@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":library"))
+    api (project(":library"))
 
     testImplementation ("org.junit.jupiter:junit-jupiter:6.0.3")
     testRuntimeOnly ("org.junit.platform:junit-platform-launcher")

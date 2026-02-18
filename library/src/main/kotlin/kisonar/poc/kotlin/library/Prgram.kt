@@ -1,4 +1,4 @@
-package poc.kotlin
+package kisonar.poc.kotlin.library
 
 fun main(args: Array<String>) {
 

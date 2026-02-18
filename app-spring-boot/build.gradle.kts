@@ -5,5 +5,5 @@ plugins {
 }
 
 dependencies {
-    //implementation(project(":service"))
+    implementation(project(":service"))
 }
