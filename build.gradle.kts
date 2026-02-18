@@ -1,3 +1,8 @@
+plugins {
+    id("org.jetbrains.kotlin.jvm")
+}
+
+
 allprojects {
 
     group = "poc.kotlin"
@@ -7,10 +12,14 @@ allprojects {
         mavenCentral()
     }
 
-    //dependencies {
-    //    testImplementation("org.junit.jupiter:junit-jupiter-engine:6.0.2")
-    //    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.2")
-    //}
+    tasks.withType<Test> {
+        useJUnitPlatform {
+        }
+    }
+
+    // TODO: https://docs.gradle.org/current/userguide/sharing_build_logic_between_subprojects.html
+
+
+
+
 }
-
-

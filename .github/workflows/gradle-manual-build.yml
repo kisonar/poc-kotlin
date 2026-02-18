@@ -1,0 +1,31 @@
+name: 'Kisonar POC Kotlin manual build'
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_env:
+        description: 'Environment to which make the terraform deployment'
+        required: true
+        default: dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Check identity
+        run: whoami
+      - name: GitHub checkout action
+        uses: actions/checkout@v3
+      - name: Setup Kotlin
+        uses: fwilhe2/setup-kotlin@main
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.14.3
+      - name: Print Gradle version
+        run: gradle --version
+      - name: Execute Gradle build
+        run: gradle clean build
+
