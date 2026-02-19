@@ -3,22 +3,19 @@
  */
 package poc.kotlin.app
 
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan
+import org.springframework.boot.runApplication
 
-fun main()  {
-    processAsync()
-    println("Main finished")
+@ConfigurationPropertiesScan
+@SpringBootApplication
+class Application
+
+fun main(args: Array<String>) {
+    val context = runApplication<Application>(*args)
+    Runtime.getRuntime().addShutdownHook(object : Thread() {
+        override fun run() {
+            context.close()
+        }
+    })
 }
-
-
-fun processAsync(){
-    println("Delay finieshed")
-}
-
-
-
-
-
-
-
-
-
