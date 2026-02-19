@@ -1,6 +1,11 @@
 plugins {
     id("org.jetbrains.kotlin.plugin.spring")
+    id("com.avast.gradle.docker-compose") version "0.17.21"
+    id("org.springframework.boot")
 }
+
+apply(plugin = "org.springframework.boot")
+apply(plugin = "docker-compose")
 
 dependencies {
 
