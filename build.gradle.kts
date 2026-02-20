@@ -8,15 +8,17 @@ allprojects {
 
     apply(plugin = "org.jetbrains.kotlin.jvm") // is required by dependencies
 
-    repositories {
-        mavenCentral()
+    tasks.withType<Test> {
+        useJUnitPlatform()
+        testLogging {
+            showStandardStreams = true
+            events("passed", "skipped", "failed")
+        }
+        failFast = true
     }
 
-    tasks.withType<Test> {
-        useJUnitPlatform {
-            ignoreFailures = false /* true continue even there are test failures*/
-            failFast = true
-        }
+    repositories {
+        mavenCentral()
     }
 
     dependencies {
