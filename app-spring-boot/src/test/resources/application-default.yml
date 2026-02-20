@@ -1,0 +1,12 @@
+logging:
+  level:
+    root: INFO
+    kisonar.poc.kotlin.app.service: DEBUG
+
+spring:
+  cloud.config.enabled: false
+  main:
+    banner-mode: console
+
+  application:
+    name: kisonar-poc-kotlin-spring-boot
