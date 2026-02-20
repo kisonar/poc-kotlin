@@ -4,7 +4,6 @@
 Kotlin learning
 ```
 ## Stuff
-
 Gradle wrapper determines version - 9.3.1
 JVM 25
 kotlinVersion=2.3.10
