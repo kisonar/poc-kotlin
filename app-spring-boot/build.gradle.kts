@@ -47,3 +47,8 @@ tasks.withType<Test> {
     }
     failFast = true
 }
+
+dockerCompose {
+     isRequiredBy(project.tasks.test)
+     useComposeFiles = listOf("./docker-compose.yml")
+}
