@@ -7,6 +7,7 @@ plugins {
 apply(plugin = "org.springframework.boot")
 apply(plugin = "com.avast.gradle.docker-compose")
 
+
 dependencies {
 
     val springBootVersion = project.extra["springBootVersion"].toString()
@@ -24,7 +25,7 @@ dependencies {
     // metrics
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     // JSON
-    // implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     // mongo
     // implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
     // kotlin
@@ -32,7 +33,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     // test
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-webflux-test:${springBootVersion}")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    //testImplementation("io.kotest:kotest-assertions-json:6.1.3")
+    //testImplementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.+")
+    //testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.21.+")
+    testImplementation("org.skyscreamer:jsonassert:1.5.3")
 }
 
 tasks.withType<Test> {
@@ -40,7 +46,7 @@ tasks.withType<Test> {
         ignoreFailures = false /* true continue even there are test failures*/
         failFast = true
     }
-    filter { includeTestsMatching("*IT") }
+    //filter { includeTestsMatching("*IT") }
     testLogging {
         showStandardStreams = true
         events("passed", "skipped", "failed")

@@ -5,7 +5,6 @@ plugins {
 allprojects {
     group = "poc.kotlin"
     version = "0.0.1-SNAPSHOT"
-
     apply(plugin = "org.jetbrains.kotlin.jvm") // is required by dependencies
 
     tasks.withType<Test> {
@@ -18,6 +17,7 @@ allprojects {
     }
 
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 
