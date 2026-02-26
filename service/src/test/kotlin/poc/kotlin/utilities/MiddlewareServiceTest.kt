@@ -8,7 +8,7 @@ class MiddlewareServiceTest {
     @Test
     fun aaa (){
         val cut = MiddlewareService()
-        cut.checkList()
+        cut.fetch()
     }
 
 
