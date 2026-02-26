@@ -13,7 +13,7 @@ class MiddlewareServiceTest {
         val users = cut.fetchUsers()
     fun aaa (){
         val cut = MiddlewareService()
-        cut.checkList()
+        cut.fetch()
     }
 
 
