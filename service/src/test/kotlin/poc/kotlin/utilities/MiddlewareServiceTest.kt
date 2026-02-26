@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test
 
 class MiddlewareServiceTest {
 
+    //TODO
     @Test
-    fun aaa (){
+    fun aaa() {
         val cut = MiddlewareService()
-        cut.fetch()
+        cut.fetchUsers()
     }
-
-
 
 }
