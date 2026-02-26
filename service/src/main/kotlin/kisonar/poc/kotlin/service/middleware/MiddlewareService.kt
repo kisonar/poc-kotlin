@@ -6,4 +6,6 @@ import kisonar.poc.kotlin.library.user.UserFactory
 class MiddlewareService {
 
     fun fetchUsers() : List<User> = UserFactory.getUsers()
+    fun checkList() {
+    }
 }
