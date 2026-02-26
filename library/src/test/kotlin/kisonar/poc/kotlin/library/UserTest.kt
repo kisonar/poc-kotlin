@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 class UserTest {
 
     @Test
-    fun `should create instance` () {
+    fun `should create user instance` () {
         val cut = User(1, attributes = UserAttributes(
             name = "name",  age = 4, mail = "mail"
         ))
