@@ -33,7 +33,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     // test
-    testImplementation("org.springframework.boot:spring-starter-test:${springBootVersion}")
     testImplementation("org.springframework.boot:spring-boot-webflux-test:${springBootVersion}")
     testImplementation("com.ninja-squad:springmockk:4.0.2")
     //testImplementation("io.kotest:kotest-assertions-json:6.1.3")
