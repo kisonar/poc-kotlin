@@ -7,10 +7,10 @@ import org.springframework.test.annotation.DirtiesContext
 
 @DirtiesContext
 @SpringBootTest(properties = ["spring.main.lazy-initialization=false"])
-class UserServiceIT(@Autowired private val userService: UserService) {
+class InternalServiceIT(@Autowired private val internalService: InternalService) {
 
     @Test
     fun `execute test`() {
-        userService.showLog()
+        internalService.showLog()
     }
 }
