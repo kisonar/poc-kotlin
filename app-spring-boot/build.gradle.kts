@@ -27,9 +27,6 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     // mongo
     // implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
-    // kotlin
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     // test
     testImplementation("org.springframework.boot:spring-boot-webflux-test:${springBootVersion}")
