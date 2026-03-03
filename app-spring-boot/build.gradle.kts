@@ -34,7 +34,7 @@ dependencies {
 
     // test
     testImplementation("org.springframework.boot:spring-boot-webflux-test:${springBootVersion}")
-    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("com.ninja-squad:springmockk:5.0.1")
     //testImplementation("io.kotest:kotest-assertions-json:6.1.3")
     //testImplementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.+")
     //testImplementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.21.+")
