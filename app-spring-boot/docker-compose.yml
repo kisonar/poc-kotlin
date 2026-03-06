@@ -10,7 +10,7 @@ services:
       MARIADB_PASSWORD: pass
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./storage:/var/lib/mysql
+      - ./mariadb-data:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d/
     ports:
       - "3306:3306"
@@ -20,3 +20,15 @@ services:
     restart: always
     ports:
       - "8085:8080"
+
+  mongo:
+    image: mongo:7.0.30
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: marcin-user
+      MONGO_INITDB_ROOT_PASSWORD: marcin-password
+      MONGO_INITDB_DATABASE: marcin-database
+    volumes:
+      - ./mondo-data:/data/db

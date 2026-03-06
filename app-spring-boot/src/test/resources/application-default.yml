@@ -10,3 +10,9 @@ spring:
 
   application:
     name: kisonar-poc-kotlin-spring-boot
+
+  mongodb:
+    uri: mongodb://marcin-user:marcin-password@localhost:27017/hiven?authSource=admin&authMechanism=SCRAM-SHA-1
+  data:
+    mongodb:
+      auto-index-creation: true
