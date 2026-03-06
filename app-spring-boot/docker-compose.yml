@@ -15,6 +15,7 @@ services:
     ports:
       - "3306:3306"
 
+  # connect to database mariadb with proper user/pass and default_database
   adminer:
     image: adminer
     restart: always
