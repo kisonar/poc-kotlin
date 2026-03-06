@@ -11,11 +11,17 @@ spring:
   application:
     name: kisonar-poc-kotlin-spring-boot
 
-management:
-  info:
-    java:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: health, info
+  mongodb:
+    uri: mongodb://marcin-user:marcin-password@localhost:27017/hiven?authSource=admin&authMechanism=SCRAM-SHA-1
+  data:
+    mongodb:
+      auto-index-creation: true
+
+  management:
+    info:
+      java:
+        enabled: true
+    endpoints:
+      web:
+        exposure:
+          include: health, info
