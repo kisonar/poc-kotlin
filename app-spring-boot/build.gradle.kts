@@ -26,7 +26,7 @@ dependencies {
     // JSON
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     // mongo
-    // implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
 
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
