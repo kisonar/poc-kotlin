@@ -23,15 +23,16 @@ services:
       - "8085:8080"
 
   mongo:
-    image: mongo:7.0.30
+    image: mongo:5.0.9
     restart: always
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: marcin-user
-      MONGO_INITDB_ROOT_PASSWORD: marcin-password
-      MONGO_INITDB_DATABASE: marcin-database
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: admin
     volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
       - ./mondo-data:/data/db
 
   mongo-express:
