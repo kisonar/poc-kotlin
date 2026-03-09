@@ -4,9 +4,17 @@ logging:
     kisonar.poc.kotlin.app.service: DEBUG
 
 spring:
-  cloud.config.enabled: false
+  cloud:
+    config:
+      enabled: false
   main:
     banner-mode: console
 
   application:
     name: kisonar-poc-kotlin-spring-boot
+
+  mongodb:
+    uri: mongodb://adminUser:passwordUser@localhost:27017/hiven?authSource=admin&authMechanism=SCRAM-SHA-1
+  data:
+    mongodb:
+      auto-index-creation: true
