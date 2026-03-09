@@ -4,7 +4,9 @@ logging:
     kisonar.poc.kotlin.app.service: DEBUG
 
 spring:
-  cloud.config.enabled: false
+  cloud:
+    config:
+      enabled: false
   main:
     banner-mode: console
 
