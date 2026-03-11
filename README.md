@@ -10,7 +10,20 @@ kotlinVersion=2.3.10
 springBootVersion=3.5.4
 
 ## Web endpoints
+```
 http://localhost:8080/actuator
 http://localhost:8080/actuator/info
 http://localhost:8080/actuator/health
 http://localhost:8080/swagger-ui
+```
+
+# Spring compatibility matrix
+https://github.com/spring-cloud/spring-cloud-release/wiki/Supported-Versions#supported-releases
+
+# Build
+## Typical
+gradle clean build 
+
+## Generate graphs -> build/reports/dependency-graph.png
+gradle generateDependencyGraph 
+gradle generateProjectDependencyGraph  does not work with Gradle 9.x

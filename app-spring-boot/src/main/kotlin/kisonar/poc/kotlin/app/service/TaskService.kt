@@ -1,10 +1,6 @@
 package kisonar.poc.kotlin.app.service
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
@@ -17,19 +13,35 @@ class TaskService {
     private val scope = CoroutineScope(Dispatchers.IO + supervisorJob)
 
     suspend fun invokeAsyncProcessingTask() {
-        for (element in 1 .. 100 ) {
-            LOG.info("Invoking processing task")
-            scope.launch { executeRequest(element)  }
+        for (element in 1..50) {
+            LOG.info("Launching task $element")
+            scope.launch { executeRequest(element) }
         }
     }
 
-    private suspend fun executeRequest(value: Int ) {
+    private suspend fun executeRequest(value: Int) {
         try {
-            delay(value.toLong())
-            LOG.info("Executing request")
+            LOG.info("Executing request $value")
+            delay(20)
+            LOG.info("Executing request $value done")
 
         } catch (e: Exception) {
             LOG.error("Error executing request", e)
         }
+    }
+
+    suspend fun cleanup() {
+        LOG.info("Cleaning up children")
+        supervisorJob.children.forEach {
+            try {
+                it.join()
+                //LOG.info("Child $it joined")
+            } catch (e: Exception) {
+                LOG.error("Error executing request", e)
+            }
+        }
+        LOG.info("Cleaning up children done")
+        supervisorJob.cancelAndJoin()
+        LOG.info("Cleaning up supervizor job")
     }
 }
