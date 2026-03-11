@@ -14,3 +14,7 @@ http://localhost:8080/actuator
 http://localhost:8080/actuator/info
 http://localhost:8080/actuator/health
 http://localhost:8080/swagger-ui
+
+
+# Spring compatibility matrix
+https://github.com/spring-cloud/spring-cloud-release/wiki/Supported-Versions#supported-releases
