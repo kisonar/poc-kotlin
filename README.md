@@ -18,3 +18,7 @@ http://localhost:8080/swagger-ui
 
 # Spring compatibility matrix
 https://github.com/spring-cloud/spring-cloud-release/wiki/Supported-Versions#supported-releases
+
+# build
+gradle clean build generateDependencyGraph 
+gradle generateProjectDependencyGraph  does not work with Gradle 9.x

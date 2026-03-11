@@ -1,11 +1,14 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
+    id("com.vanniktech.dependency.graph.generator") version "0.8.0"
+    //id("io.github.adityabhaskar.dependencygraph") version "0.1.6" // requires gradle 8
 }
 
 allprojects {
     group = "poc.kotlin"
     version = "0.0.1-SNAPSHOT"
     apply(plugin = "org.jetbrains.kotlin.jvm") // is required by dependencies
+    apply(plugin = "com.vanniktech.dependency.graph.generator")
 
     kotlin {
         jvmToolchain(25)
@@ -23,6 +26,9 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
     }
 
     dependencies {
