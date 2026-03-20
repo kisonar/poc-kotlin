@@ -3,9 +3,7 @@ package kisonar.poc.kotlin.app
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.runApplication
-import org.springframework.context.annotation.ComponentScan
 
-@ComponentScan(basePackages = ["kisonar.poc.kotlin.service.middleware", "kisonar.poc.kotlin.app"])
 @ConfigurationPropertiesScan
 @SpringBootApplication
 class App

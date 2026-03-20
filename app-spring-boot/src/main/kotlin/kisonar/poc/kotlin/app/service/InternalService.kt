@@ -1,9 +1,6 @@
 package kisonar.poc.kotlin.app.service
 
-import kisonar.poc.kotlin.app.model.UserMongoData
-import kisonar.poc.kotlin.app.repository.MongoDataRepository
 import kisonar.poc.kotlin.service.middleware.MiddlewareService
-import kotlinx.coroutines.flow.toList
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -11,9 +8,8 @@ import org.springframework.stereotype.Service
 private val LOG = LoggerFactory.getLogger(InternalService::class.java)
 
 @Service
-class InternalService(@param:Autowired private val middlewareService: MiddlewareService,
-                      @param:Autowired private val mongoDataRepository: MongoDataRepository) {
-
+class InternalService(@field:Autowired private val middlewareService: MiddlewareService)
+{
     fun showLog() {
         LOG.info("User service log")
     }

@@ -18,21 +18,26 @@ dependencies {
     // rest
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-integration")
     // monitoring
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-actuator-autoconfigure")
     // metrics
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     // JSON
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("tools.jackson.core:jackson-core:3.1.0")
+    implementation("tools.jackson.core:jackson-databind:3.1.0")
+    implementation("tools.jackson.module:jackson-module-kotlin:3.1.0") //required for JSON serialize/deserialize
     // mongo
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
-
-    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
-    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-
+    // coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive")
+    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:2.3.20")
     // test
-    testImplementation("org.springframework.boot:spring-boot-webflux-test:${springBootVersion}")
+    testImplementation("org.springframework.boot:spring-boot-starter-webflux-test:${springBootVersion}") // extends spring-boot-test
+    //testImplementation("org.springframework.boot:spring-boot-test:${springBootVersion}") // provides @SpringBootTest
     testImplementation("com.ninja-squad:springmockk:5.0.1")
     //testImplementation("io.kotest:kotest-assertions-json:6.1.3")
     //testImplementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.+")
@@ -45,7 +50,6 @@ tasks.withType<Test> {
         ignoreFailures = false /* true continue even there are test failures*/
         failFast = true
     }
-    //filter { includeTestsMatching("*IT") }
     testLogging {
         showStandardStreams = true
         events("passed", "skipped", "failed")
