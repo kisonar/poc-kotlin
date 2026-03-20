@@ -4,8 +4,8 @@ class UserFactory {
 
     companion object {
         fun getUsers(): List<User> = listOf(
-            getUser(1, "name1", 5, "mail1"),
-            getUser(2, "name2", 67, "mail2"),
+            getUser(1, "name1", 45, "mail1@mail"),
+            getUser(2, "name2", 67, "mail2@mail"),
         )
 
         fun getUser(id: Int, name: String, age: Int, mail: String): User = User(
