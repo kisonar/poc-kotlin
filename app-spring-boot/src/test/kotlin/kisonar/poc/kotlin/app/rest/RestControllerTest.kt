@@ -24,19 +24,19 @@ class RestControllerTest(@param:Autowired val webTestClient: WebTestClient) {
         coEvery { internalService.fetchUsersFromMiddleware() } returns UserFactory.getUsers()
         @Language("json")
         val expectedResponse = """[
-              {
+                            {
                 "id":1,
                 "attributes":{
-                  "age":4,
-                  "mail":"mail@mail",
-                  "name":"name"}
+                  "age":45,
+                  "mail":"mail-1@mail.pl",
+                  "name":"name1"}
               },
               {
                 "id":2,
                 "attributes":{
-                  "age":5,
-                  "mail":"mail2@mail",
-                  "name":"name"
+                  "age":67,
+                  "mail":"mail-2@mail.pl",
+                  "name":"name2"
                 }
               }
             ]
