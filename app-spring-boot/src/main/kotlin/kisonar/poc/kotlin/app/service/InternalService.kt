@@ -15,7 +15,4 @@ class InternalService(@field:Autowired private val middlewareService: Middleware
     }
 
     suspend fun fetchUsersFromMiddleware()  = middlewareService.fetchMockedUsers()
-
-
-
 }
