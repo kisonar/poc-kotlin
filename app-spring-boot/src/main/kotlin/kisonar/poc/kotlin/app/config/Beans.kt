@@ -9,4 +9,5 @@ class Beans {
 
     @Bean
     fun creatMiddlewareService(): MiddlewareService  = MiddlewareService()
+
 }
