@@ -14,7 +14,7 @@ dependencies {
     // boot dependencies
     implementation(platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}"))
     // docs
-    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:3.0.2")
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:3.0.3")
     // rest
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-validation")
