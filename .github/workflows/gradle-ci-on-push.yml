@@ -10,7 +10,7 @@ jobs:
       contents: read
     steps:
       - name: GitHub checkout action
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Kotlin
         uses: fwilhe2/setup-kotlin@main
       - name: Print Kotlin version
