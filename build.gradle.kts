@@ -40,6 +40,6 @@ allprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
         testImplementation("org.junit.jupiter:junit-jupiter:6.1.2")
         testImplementation("io.mockk:mockk:1.14.11")
-        testImplementation("io.kotest:kotest-assertions-core-jvm:6.2.1")
+        testImplementation("io.kotest:kotest-assertions-core-jvm:6.2.2")
     }
 }
