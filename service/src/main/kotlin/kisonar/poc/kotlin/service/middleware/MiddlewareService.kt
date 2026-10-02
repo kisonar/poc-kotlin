@@ -5,7 +5,8 @@ import kisonar.poc.kotlin.library.user.UserFactory
 
 class MiddlewareService {
 
-    fun fetchUsers(): List<User> = UserFactory.getUsers()
+    fun fetchMockedUsers(): List<User> = UserFactory.getUsers()
+
     suspend fun checkList(traceId: String, block: suspend () -> Unit) {
         println(traceId)
         block()

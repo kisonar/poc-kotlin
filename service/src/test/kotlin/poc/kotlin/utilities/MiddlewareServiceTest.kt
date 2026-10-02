@@ -11,7 +11,7 @@ class MiddlewareServiceTest {
 
     @Test
     fun `should fetch users`() {
-        val users = cut.fetchUsers()
+        val users = cut.fetchMockedUsers()
 
         users.size shouldBe 2
     }
