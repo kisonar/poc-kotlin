@@ -21,7 +21,7 @@ jobs:
       - name: Setup Kotlin
         uses: fwilhe2/setup-kotlin@main
       - name: Setup Gradle 9.8.0
-        uses: gradle/actions/setup-gradle@v6
+        uses: gradle/actions/setup-gradle@v6.3.0
         with:
           gradle-version: 9.8.0
       - name: Print Gradle version
