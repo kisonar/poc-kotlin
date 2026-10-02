@@ -28,14 +28,14 @@ class RestControllerTest(@param:Autowired val webTestClient: WebTestClient) {
                 "id":1,
                 "attributes":{
                   "age":45,
-                  "mail":"mail-1@mail.pl",
+                  "mail":"mail1@mail",
                   "name":"name1"}
               },
               {
                 "id":2,
                 "attributes":{
                   "age":67,
-                  "mail":"mail-2@mail.pl",
+                  "mail":"mail2@mail",
                   "name":"name2"
                 }
               }
