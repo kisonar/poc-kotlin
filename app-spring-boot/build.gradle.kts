@@ -25,8 +25,8 @@ dependencies {
     // metrics
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     // JSON
-    implementation("tools.jackson.core:jackson-core:3.1.0")
-    implementation("tools.jackson.core:jackson-databind:3.1.0")
+    implementation("tools.jackson.core:jackson-core:3.2.3")
+    implementation("tools.jackson.core:jackson-databind:3.2.3")
     implementation("tools.jackson.module:jackson-module-kotlin:3.1.0") //required for JSON serialize/deserialize
     // mongo
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:${springBootVersion}")
