@@ -34,7 +34,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive")
-    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:2.3.20")
+    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:2.4.20")
     // test
     testImplementation("org.springframework.boot:spring-boot-starter-webflux-test:${springBootVersion}") // extends spring-boot-test
     //testImplementation("org.springframework.boot:spring-boot-test:${springBootVersion}") // provides @SpringBootTest
