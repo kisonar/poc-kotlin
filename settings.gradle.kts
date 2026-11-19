@@ -15,8 +15,4 @@ pluginManagement {
         id("org.springframework.boot") version "$springBootVersion"
     }
 }
-
-
-
-
 include("base")
